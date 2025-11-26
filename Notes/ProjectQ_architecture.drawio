@@ -1,0 +1,260 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0" version="29.1.1" pages="3">
+  <diagram name="ProjectQ Part 1 - RAG Context Assistant" id="0">
+    <mxGraphModel dx="1371" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User" vertex="1">
+          <mxGeometry height="40" width="80" x="40" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="ui1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="CLI / Notebook Interface" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="RAG QA Chain (LangChain)" vertex="1">
+          <mxGeometry height="60" width="140" x="320" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Vector Retriever" vertex="1">
+          <mxGeometry height="50" width="130" x="520" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vs1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Vector Store (FAISS / Chroma)" vertex="1">
+          <mxGeometry height="60" width="150" x="700" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="emb1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Embedding Model" vertex="1">
+          <mxGeometry height="50" width="140" x="705" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="docs1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Project Docs &amp; Files (README, Design, Config)" vertex="1">
+          <mxGeometry height="70" width="170" x="690" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="1000" edge="1" parent="1" source="u1" style="endArrow=block;rounded=1;" target="ui1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1001" edge="1" parent="1" source="ui1" style="endArrow=block;rounded=1;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1002" edge="1" parent="1" source="p1" style="endArrow=block;rounded=1;" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1003" edge="1" parent="1" source="r1" style="endArrow=block;rounded=1;" target="vs1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1004" edge="1" parent="1" source="docs1" style="endArrow=block;rounded=1;" target="emb1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1005" edge="1" parent="1" source="emb1" style="endArrow=block;rounded=1;" target="vs1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1006" edge="1" parent="1" source="p1" style="endArrow=block;rounded=1;" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="ProjectQ Part 2 - Multi-Agent Insight Orchestrator" id="1">
+    <mxGraphModel dx="1371" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User" vertex="1">
+          <mxGeometry height="40" width="80" x="40" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="proj2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Project Repo/ Folder" vertex="1">
+          <mxGeometry height="60" width="120" x="950" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="orc2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Multi-Agent Orchestrator (LangGraph / CrewAI)" vertex="1">
+          <mxGeometry height="70" width="200" x="200" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="a_an" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 1: Context Analyzer" vertex="1">
+          <mxGeometry height="70" width="150" x="520" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="a_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 2: Documentation Reviewer" vertex="1">
+          <mxGeometry height="70" width="170" x="520" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a_in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 3: Insight &amp; Triage" vertex="1">
+          <mxGeometry height="70" width="150" x="520" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_fr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: File / Repo Reader" vertex="1">
+          <mxGeometry height="60" width="170" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_rag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: RAG Context Assistant (from Part 1)" vertex="1">
+          <mxGeometry height="70" width="190" x="720" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_tag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: Keyword / Tag Extractor" vertex="1">
+          <mxGeometry height="60" width="190" x="720" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="docs2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Project Docs &amp; Files" vertex="1">
+          <mxGeometry height="60" width="150" x="1015" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="emb2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Embedding Model" vertex="1">
+          <mxGeometry height="50" width="130" x="1025" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="vs2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Vector Store (FAISS / Chroma)" vertex="1">
+          <mxGeometry height="60" width="160" x="1010" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="rep2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ProjectQ Insight Report" vertex="1">
+          <mxGeometry height="70" width="170" x="200" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="1000" edge="1" parent="1" source="u2" style="endArrow=block;rounded=1;" target="orc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1001" edge="1" parent="1" source="proj2" style="endArrow=block;rounded=1;" target="tool_fr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1002" edge="1" parent="1" source="orc2" style="endArrow=block;rounded=1;" target="a_an">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1003" edge="1" parent="1" source="orc2" style="endArrow=block;rounded=1;" target="a_doc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1004" edge="1" parent="1" source="orc2" style="endArrow=block;rounded=1;" target="a_in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1005" edge="1" parent="1" source="a_an" style="endArrow=block;rounded=1;" target="tool_fr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1006" edge="1" parent="1" source="a_doc" style="endArrow=block;rounded=1;" target="tool_rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1007" edge="1" parent="1" source="a_in" style="endArrow=block;rounded=1;" target="tool_tag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1008" edge="1" parent="1" source="docs2" style="endArrow=block;rounded=1;" target="emb2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1009" edge="1" parent="1" source="emb2" style="endArrow=block;rounded=1;" target="vs2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1010" edge="1" parent="1" source="tool_rag" style="endArrow=block;rounded=1;" target="vs2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1011" edge="1" parent="1" source="a_in" style="endArrow=block;rounded=1;" target="rep2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1012" edge="1" parent="1" source="rep2" style="endArrow=block;rounded=1;" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="ProjectQ Part 3 - Production-Ready Console" id="2">
+    <mxGraphModel dx="1371" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User (Engineer / Reviewer)" vertex="1">
+          <mxGeometry height="60" width="150" x="40" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ui3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Web UI (Streamlit / Gradio)" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="api3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Backend Service / API" vertex="1">
+          <mxGeometry height="70" width="170" x="440" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="orc3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Multi-Agent Orchestrator" vertex="1">
+          <mxGeometry height="70" width="190" x="660" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_an" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 1: Context Analyzer" vertex="1">
+          <mxGeometry height="70" width="160" x="900" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 2: Documentation Reviewer" vertex="1">
+          <mxGeometry height="70" width="180" x="900" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Agent 3: Insight &amp; Triage" vertex="1">
+          <mxGeometry height="70" width="160" x="900" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_fr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: File / Repo Reader" vertex="1">
+          <mxGeometry height="60" width="180" x="1120" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_rag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: RAG Context Assistant" vertex="1">
+          <mxGeometry height="60" width="190" x="1120" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_tag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tool: Keyword / Tag Extractor" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="docs3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Project Docs &amp; Files (Project Input)" vertex="1">
+          <mxGeometry height="70" width="180" x="780" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="emb3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Embedding Model" vertex="1">
+          <mxGeometry height="50" width="140" x="980" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="vs3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Vector Store (FAISS / Chroma)" vertex="1">
+          <mxGeometry height="70" width="180" x="1130" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="rep3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Insight Report + Recommended Doc Outline" vertex="1">
+          <mxGeometry height="80" width="220" x="645" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tests3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Test Suite (Unit / Integration / E2E)" vertex="1">
+          <mxGeometry height="70" width="190" x="240" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="log3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Logging &amp; Error Tracking" vertex="1">
+          <mxGeometry height="60" width="190" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="mon3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Monitoring &amp; Metrics" vertex="1">
+          <mxGeometry height="60" width="190" x="240" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Config &amp; Environment (.env / config.yaml)" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dep3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Deployment Environment (Local / Cloud)" vertex="1">
+          <mxGeometry height="70" width="200" x="425" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="1000" edge="1" parent="1" source="u3" style="endArrow=block;rounded=1;" target="ui3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1001" edge="1" parent="1" source="ui3" style="endArrow=block;rounded=1;" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1002" edge="1" parent="1" source="api3" style="endArrow=block;rounded=1;" target="orc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1003" edge="1" parent="1" source="orc3" style="endArrow=block;rounded=1;" target="a3_an">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1004" edge="1" parent="1" source="orc3" style="endArrow=block;rounded=1;" target="a3_doc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1005" edge="1" parent="1" source="orc3" style="endArrow=block;rounded=1;" target="a3_in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1006" edge="1" parent="1" source="a3_an" style="endArrow=block;rounded=1;" target="t3_fr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1007" edge="1" parent="1" source="a3_doc" style="endArrow=block;rounded=1;" target="t3_rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1008" edge="1" parent="1" source="a3_in" style="endArrow=block;rounded=1;" target="t3_tag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1009" edge="1" parent="1" source="docs3" style="endArrow=block;rounded=1;" target="emb3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1010" edge="1" parent="1" source="emb3" style="endArrow=block;rounded=1;" target="vs3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1011" edge="1" parent="1" source="t3_rag" style="endArrow=block;rounded=1;" target="vs3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1012" edge="1" parent="1" source="a3_in" style="endArrow=block;rounded=1;" target="rep3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1013" edge="1" parent="1" source="rep3" style="endArrow=block;rounded=1;" target="ui3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1014" edge="1" parent="1" source="tests3" style="endArrow=block;rounded=1;" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1015" edge="1" parent="1" source="log3" style="endArrow=block;rounded=1;" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1016" edge="1" parent="1" source="mon3" style="endArrow=block;rounded=1;" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1017" edge="1" parent="1" source="cfg3" style="endArrow=block;rounded=1;" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1018" edge="1" parent="1" source="api3" style="endArrow=block;rounded=1;" target="dep3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
